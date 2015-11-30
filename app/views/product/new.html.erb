@@ -1,0 +1,6 @@
+<%= form_for(@product, url: "/import", multipart: true) do |f|%>
+  <%= f.file_field :file %>
+  <br>
+  <br>
+  <%= f.submit%>
+<%end%>

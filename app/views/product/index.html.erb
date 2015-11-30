@@ -1,0 +1,21 @@
+
+<p>Products Details!</p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>links</th>
+  </tr>
+  <% @products.each do |p|%>
+    <tr>
+      <td><%= p.id%></td>
+      <td><%= p.name%></td>
+      <td><%= p.price%></td>
+      <td><%= link_to p.name, product_path(p)%></td>
+    </tr>
+  <%end%>
+</table>
+
+<%= link_to "download", download_path(:csv) %>
